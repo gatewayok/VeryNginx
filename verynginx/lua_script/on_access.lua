@@ -5,6 +5,7 @@ local frequency_limit = require "frequency_limit"
 local router = require "router"
 local backend_static = require "backend_static"
 local backend_proxy = require "backend_proxy"
+local ip_filter = require "ip_filter"
 
 if ngx.var.vn_exec_flag and ngx.var.vn_exec_flag ~= '' then
     return
@@ -17,6 +18,7 @@ browser_verify.filter()
 frequency_limit.filter()
 router.filter()
 
-
 backend_static.filter()
 backend_proxy.filter()
+
+ip_filter.filter()
