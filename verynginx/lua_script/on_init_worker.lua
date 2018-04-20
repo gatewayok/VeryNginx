@@ -1,2 +1,2 @@
-local task_iplist = require "task_iplist"
---task_iplist.init()
+local ip_filter = require "ip_filter"
+ip_filter.task_getips()
