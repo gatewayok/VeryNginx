@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e4111e8-f80f-46af-9ff9-706031ec4c57" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/verynginx/lua_script/module/task_iplist.lua" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/verynginx/lua_script/resty/iputils.lua" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/install.py" afterPath="$PROJECT_DIR$/install.py" />
-      <change beforePath="$PROJECT_DIR$/verynginx/lua_script/on_access.lua" afterPath="$PROJECT_DIR$/verynginx/lua_script/on_access.lua" />
-      <change beforePath="$PROJECT_DIR$/verynginx/lua_script/on_init.lua" afterPath="$PROJECT_DIR$/verynginx/lua_script/on_init.lua" />
-      <change beforePath="$PROJECT_DIR$/verynginx/nginx_conf/in_http_block.conf" afterPath="$PROJECT_DIR$/verynginx/nginx_conf/in_http_block.conf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="install.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="install.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="209">
+              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -46,8 +40,8 @@
       <file leaf-file-name="VeryNginxConfig.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/verynginx/lua_script/VeryNginxConfig.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="359" column="31" lean-forward="false" selection-start-line="359" selection-start-column="12" selection-end-line="359" selection-end-column="31" />
+            <state relative-caret-position="285">
+              <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -92,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="on_init_worker.lua" pinned="false" current-in-tab="false">
+      <file leaf-file-name="on_init_worker.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
@@ -115,8 +109,8 @@
       <file leaf-file-name="ip_filter.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -178,9 +172,9 @@
         <option value="$PROJECT_DIR$/verynginx/lua_script/on_access.lua" />
         <option value="$PROJECT_DIR$/verynginx/lua_script/module/task_iplist.lua" />
         <option value="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" />
-        <option value="$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua" />
         <option value="$PROJECT_DIR$/verynginx/lua_script/module/router.lua" />
         <option value="$PROJECT_DIR$/install.py" />
+        <option value="$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua" />
       </list>
     </option>
   </component>
@@ -230,34 +224,19 @@
               <item name="VeryNginx" type="b2602c69:ProjectViewProjectNode" />
               <item name="VeryNginx" type="462c0819:PsiDirectoryNode" />
               <item name="verynginx" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VeryNginx" type="b2602c69:ProjectViewProjectNode" />
               <item name="VeryNginx" type="462c0819:PsiDirectoryNode" />
               <item name="verynginx" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VeryNginx" type="b2602c69:ProjectViewProjectNode" />
               <item name="VeryNginx" type="462c0819:PsiDirectoryNode" />
               <item name="verynginx" type="462c0819:PsiDirectoryNode" />
               <item name="lua_script" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VeryNginx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VeryNginx" type="462c0819:PsiDirectoryNode" />
-              <item name="verynginx" type="462c0819:PsiDirectoryNode" />
-              <item name="lua_script" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VeryNginx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VeryNginx" type="462c0819:PsiDirectoryNode" />
-              <item name="verynginx" type="462c0819:PsiDirectoryNode" />
-              <item name="lua_script" type="462c0819:PsiDirectoryNode" />
-              <item name="resty" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VeryNginx" type="b2602c69:ProjectViewProjectNode" />
@@ -321,7 +300,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27056277" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20779221" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23701298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12579957" sideWeight="0.49617487" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -724,14 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/VeryNginxConfig.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="359" column="31" lean-forward="false" selection-start-line="359" selection-start-column="12" selection-end-line="359" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verynginx/dashboard/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
@@ -746,22 +717,6 @@
             <marker date="1520217982060" expanded="true" signature="1657:2240" ph="..." />
             <marker date="1520217982060" expanded="true" signature="1950:2123" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,10 +752,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/VeryNginxConfig.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/install.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="209">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
           <folding />
         </state>
       </provider>
