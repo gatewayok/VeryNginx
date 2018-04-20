@@ -19,8 +19,8 @@ local banlist_ips = {
       --"128.199.113.98",
 }
 
+local redis = require "resty.redis_iresty"
 local red = redis:new()
-red:set_timeout(1000) -- 1 sec
 
 function _M.task_getips()
     local delay = 3  -- in seconds
@@ -49,11 +49,11 @@ function _M.task_getips()
 end
 
 function _M.refreship()
-            local ok, err = red:connect("13.114.163.82", 6379)
-            if not ok then
-                ngx.say("failed to connect: ", err)
-                return
-            end
+            --local ok, err = red:connect("13.114.163.82", 6379)
+            --if not ok then
+            --    ngx.say("failed to connect: ", err)
+            --    return
+            --end
 
             local count
             count, err = red:get_reused_times()
