@@ -3,8 +3,6 @@
 local _M = {}
 local iputils = require("resty.iputils")
 local redis = require("resty.redis")
-local log = ngx.log
-local ERR = ngx.ERR
 iputils.enable_lrucache()
 local whitelist_ips = {
       "127.0.0.1",
@@ -27,11 +25,11 @@ function _M.task_getips()
 
     check = function(premature)
         if not premature then
-            log(ERR, "start refresh ip")
+            ngx.log(ngx.ERR, "start refresh ip: ", err)
             _M.refreship()
             local ok, err = new_timer(delay, check)
             if not ok then
-                log(ERR, "failed to create timer: ", err)
+                ngx.log(ngx.ERR, "failed to create timer: ", err)
                 return
             end
         end
@@ -40,7 +38,7 @@ function _M.task_getips()
     if ngx.worker.id() == 0 then
         local ok, err = new_timer(delay, check)
         if not ok then
-            log(ERR, "failed to create timer: ", err)
+            ngx.log(ngx.ERR, "failed to create timer: ", err)
             return
         end
     end
@@ -54,7 +52,7 @@ function _M.refreship()
 
             local ok, err = red:connect("172.31.26.218", 6379)
             if not ok then
-                ngx.say("failed to connect: ", err)
+                ngx.log(ngx.ERR, "failed to connect: ", err)
                 return
             end
             local count
@@ -62,26 +60,26 @@ function _M.refreship()
             if 0 == count then
                 ok, err = red:auth("Jxnginxredis")
                 if not ok then
-                    ngx.say("failed to auth: ", err)
+                    ngx.log(ngx.ERR, "failed to auth: ", err)
                     return
                 end
             elseif err then
-                ngx.say("failed to get reused times: ", err)
+                ngx.log(ngx.ERR, "failed to get reused times: ", err)
                 return
             end
 
             ok, err = red:set("dog", "an animal")
             if not ok then
-                ngx.say("failed to set dog: ", err)
+                ngx.log(ngx.ERR, "failed to set dog: ", err)
                 return
             end
 
-            log(ERR, "set result ok")
+            ngx.log(ngx.ERR, "set result ok: ", err)
 
             -- 连接池大小是100个，并且设置最大的空闲时间是 10 秒
             local ok, err = red:set_keepalive(10000, 100)
             if not ok then
-                ngx.say("failed to set keepalive: ", err)
+                ngx.log(ngx.ERR, "failed to set keepalive: ", err)
                 return
             end
   whitelist_ips = {

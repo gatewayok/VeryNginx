@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e4111e8-f80f-46af-9ff9-706031ec4c57" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/install.py" afterPath="$PROJECT_DIR$/install.py" />
+      <change beforePath="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" afterPath="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="install.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="install.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="66" column="82" lean-forward="false" selection-start-line="66" selection-start-column="82" selection-end-line="66" selection-end-column="82" />
+            <state relative-caret-position="327">
+              <caret line="91" column="75" lean-forward="true" selection-start-line="91" selection-start-column="75" selection-end-line="91" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ip_filter.lua" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ip_filter.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+            <state relative-caret-position="-228">
+              <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -91,7 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dashboard_host</find>
       <find>save_config</find>
       <find>config</find>
       <find>dump_to_file</find>
@@ -110,7 +109,6 @@
       <find>report</find>
       <find>.set</find>
       <find>resolver</find>
-      <find>ngx.log</find>
       <find>lrucache</find>
       <find>set_config_metadata</find>
       <find>/config</find>
@@ -119,8 +117,10 @@
       <find>127.0.0.1</find>
       <find>count</find>
       <find>get_reused_times</find>
-      <find>127</find>
       <find>log</find>
+      <find>127</find>
+      <find>ngx.say</find>
+      <find>ngx.log</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\gateway\Projects\VeryNginx\verynginx\dashboard</dir>
@@ -146,8 +146,8 @@
         <option value="$PROJECT_DIR$/verynginx/lua_script/resty/redis.lua" />
         <option value="$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua" />
         <option value="$PROJECT_DIR$/verynginx/lua_script/resty/redis_iresty.lua" />
-        <option value="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" />
         <option value="$PROJECT_DIR$/install.py" />
+        <option value="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" />
       </list>
     </option>
   </component>
@@ -739,14 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/resty/redis_iresty.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="97" column="29" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -755,18 +747,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua">
+    <entry file="file://$PROJECT_DIR$/install.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+        <state relative-caret-position="327">
+          <caret line="91" column="75" lean-forward="true" selection-start-line="91" selection-start-column="75" selection-end-line="91" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install.py">
+    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/resty/redis_iresty.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="66" column="82" lean-forward="false" selection-start-line="66" selection-start-column="82" selection-end-line="66" selection-end-column="82" />
+        <state relative-caret-position="288">
+          <caret line="97" column="29" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
           <folding />
         </state>
       </provider>
