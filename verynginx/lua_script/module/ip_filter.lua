@@ -19,8 +19,6 @@ local banlist_ips = {
       --"128.199.113.98",
 }
 
-local redis = require "resty.redis_iresty"
-local red = redis:new()
 
 function _M.task_getips()
     local delay = 3  -- in seconds
@@ -49,12 +47,16 @@ function _M.task_getips()
 end
 
 function _M.refreship()
-            --local ok, err = red:connect("13.114.163.82", 6379)
-            --if not ok then
-            --    ngx.say("failed to connect: ", err)
-            --    return
-            --end
+            local redis = require "resty.redis"
+            local red = redis:new()
 
+            red:set_timeout(1000) -- 1 sec
+
+            local ok, err = red:connect("172.31.26.218", 6379)
+            if not ok then
+                ngx.say("failed to connect: ", err)
+                return
+            end
             local count
             count, err = red:get_reused_times()
             if 0 == count then
@@ -74,7 +76,7 @@ function _M.refreship()
                 return
             end
 
-            ngx.say("set result: ", ok)
+            log(ERR, "set result ok")
 
             -- 连接池大小是100个，并且设置最大的空闲时间是 10 秒
             local ok, err = red:set_keepalive(10000, 100)
