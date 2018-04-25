@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e4111e8-f80f-46af-9ff9-706031ec4c57" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" afterPath="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/verynginx/dashboard/index.bak.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/verynginx/dashboard/index.html" afterPath="$PROJECT_DIR$/verynginx/dashboard/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,16 +23,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="490">
               <caret line="103" column="19" lean-forward="true" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="in_http_block.conf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/verynginx/nginx_conf/in_http_block.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="69" lean-forward="false" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -56,21 +48,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ip_filter.lua" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ip_filter.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+            <state relative-caret-position="217">
+              <caret line="74" column="63" lean-forward="true" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/verynginx/dashboard/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="304">
+              <caret line="16" column="67" lean-forward="true" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/verynginx/dashboard/js/dashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="73" column="44" lean-forward="false" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -110,10 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>monitor.start</find>
-      <find>condition_value</find>
-      <find>undefined</find>
-      <find>ngx.socket.tcp</find>
       <find>tcp</find>
       <find>tcp_sock</find>
       <find>websocket</find>
@@ -125,7 +123,6 @@
       <find>lrucache</find>
       <find>set_config_metadata</find>
       <find>/config</find>
-      <find>login</find>
       <find>auth</find>
       <find>127.0.0.1</find>
       <find>count</find>
@@ -138,8 +135,13 @@
       <find>_M.configs</find>
       <find>ngx.log(ngx</find>
       <find>whitelist_ips</find>
-      <find>VeryNginx</find>
       <find>nginxredis</find>
+      <find>VeryNginx</find>
+      <find>status</find>
+      <find>login</find>
+      <find>interface_dashboard</find>
+      <find>dashboard</find>
+      <find>start</find>
     </findStrings>
     <replaceStrings>
       <replace>ip_whitelist</replace>
@@ -171,8 +173,9 @@
         <option value="$PROJECT_DIR$/verynginx/lua_script/on_init_worker.lua" />
         <option value="$PROJECT_DIR$/verynginx/lua_script/resty/redis_iresty.lua" />
         <option value="$PROJECT_DIR$/install.py" />
-        <option value="$PROJECT_DIR$/verynginx/dashboard/index.html" />
         <option value="$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua" />
+        <option value="$PROJECT_DIR$/verynginx/dashboard/js/dashboard.js" />
+        <option value="$PROJECT_DIR$/verynginx/dashboard/index.html" />
       </list>
     </option>
   </component>
@@ -233,6 +236,13 @@
               <item name="VeryNginx" type="b2602c69:ProjectViewProjectNode" />
               <item name="VeryNginx" type="462c0819:PsiDirectoryNode" />
               <item name="verynginx" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VeryNginx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VeryNginx" type="462c0819:PsiDirectoryNode" />
+              <item name="verynginx" type="462c0819:PsiDirectoryNode" />
               <item name="lua_script" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -270,6 +280,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gateway\Projects\VeryNginx\verynginx\dashboard" />
       <recent name="C:\Users\gateway\Projects\VeryNginx\verynginx\lua_script\module" />
       <recent name="C:\Users\gateway\Projects\VeryNginx\verynginx\lua_script" />
     </key>
@@ -308,7 +319,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13203463" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13203463" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27056277" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -317,7 +328,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23457944" sideWeight="0.5038251" order="2" side_tool="true" content_ui="tabs" />
@@ -382,14 +393,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/verynginx/lua_script/on_access.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/status.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
@@ -707,14 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/verynginx/dashboard/js/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="72" column="29" lean-forward="true" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/router.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1805">
@@ -787,18 +782,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/verynginx/dashboard/index.html">
+    <entry file="file://$PROJECT_DIR$/verynginx/dashboard/js/dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="335">
+          <caret line="73" column="44" lean-forward="false" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/verynginx/lua_script/module/ip_filter.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        <state relative-caret-position="217">
+          <caret line="74" column="63" lean-forward="true" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verynginx/dashboard/index.bak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1524644733020" expanded="false" signature="4391:4403" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verynginx/dashboard/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="67" lean-forward="true" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
           <folding />
         </state>
       </provider>
