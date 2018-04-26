@@ -64,7 +64,7 @@ def install_verynginx():
     if os.path.exists('/opt/verynginx/') == False:
         exec_sys_cmd( 'mkdir -p /opt/verynginx' )
     
-    exec_sys_cmd( 'cp -r -f ./verynginx /opt/verynginx' )
+    exec_sys_cmd('cd /opt/tmp/VeryNginx && git pull && cp -r -f ./verynginx /opt/verynginx')
 
     #copy nginx config file to openresty
     if os.path.exists('/opt/verynginx/openresty') == True:
