@@ -1,11 +1,11 @@
 -- -*- coding: utf-8 -*-
 local _M = {}
-local redis_host="nginxredis.jxfuntest.com"
-local redis_pwd="Jxnginxredis"
+local ip_filter_task = require "ip_filter_task"
+local redis_host = ip_filter_task.redis_host
+local redis_pwd = ip_filter_task.redis_pwd
 local dkjson = require "dkjson"
 local json = require "json"
 local util = require "util"
-local ip_filter_task = require "ip_filter_task"
 local iputils = require("resty.iputils")
 local redis = require("resty.redis")
 iputils.enable_lrucache()

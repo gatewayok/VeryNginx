@@ -1,12 +1,12 @@
 -- -*- coding: utf-8 -*-
 local _M = {}
+local redis_host="nginxredis.test.com"
+local redis_pwd="test"
 local json = require "json"
 local util = require "util"
 local iputils = require("resty.iputils")
 local redis = require("resty.redis")
 iputils.enable_lrucache()
-local redis_host="nginxredis.jxfuntest.com"
-local redis_pwd="Jxnginxredis"
 local redkey_ip_blacklist_wap = "ip_blacklist_wap"
 local redkey_ip_whitelist_wap = "ip_whitelist_wap"
 local redkey_config_ipfilter_wap_enable = "config_ipfilter_wap_enable"
