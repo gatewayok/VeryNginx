@@ -185,7 +185,10 @@ function _M.filter()
               </style>
 
             </head>
-            <body style="text-align:center"> <div style="margin:10rem auto 0 auto;"> <h1 class="headline">当前网页无法打开!</h1> <p class="light m-b">尊敬的客户 : 您所在的地区或国家限制访问本网站。</p> <p class="light m-b">Dear Customers: Your country or region is restricted to visit this station.</p> </div> </body> </html>
+            <body style="text-align:center"> <div style="margin:10rem auto 0 auto;">
+            <h1 class="headline">当前网页无法打开!</h1> <p class="light m-b">尊敬的客户 : 您所在的地区或国家限制访问本网站。</p>
+            <p class="light m-b">Dear Customers: Your country or region is restricted to visit this station.</p>
+            </div> </body> </html>
            ]]
             ngx.say(page)
             ngx.exit( ngx.HTTP_OK )
