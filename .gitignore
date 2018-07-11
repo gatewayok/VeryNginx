@@ -2,4 +2,9 @@
 *.swo
 *.swn
 *.swm
+.idea
+*.iml
+*.ipr
+*.iws
+*.bak
 __pycache__
