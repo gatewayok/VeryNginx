@@ -5,9 +5,6 @@ local ip_filter_task = require "ip_filter_task"
 local iputils = require("resty.iputils")
 
 function _M.filter()
-    ngx.log(ngx.ERR, "keys:",table.getn(ip_filter_task.ip_whitelist));
-    ngx.log(ngx.ERR, "config_ipfilter_wap_enable_filter:",ngx.shared.status:get('config_ipfilter_wap_enable' ));
-
     if ngx.shared.status:get('config_ipfilter_wap_enable' ) ~= "true" then
         return _M
     end

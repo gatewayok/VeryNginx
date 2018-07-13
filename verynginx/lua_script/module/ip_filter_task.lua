@@ -77,9 +77,9 @@ function _M.refreship()
                 --config_ipfilter_wap_enable = new_config_ipfilter_wap_enable
                 ngx.shared.status:set('config_ipfilter_wap_enable', new_config_ipfilter_wap_enable )
             end
-            ngx.log(ngx.ERR, "ip_whitelist_len:",table.getn(_M.ip_whitelist));
-            ngx.log(ngx.ERR, "ip_blacklist_len:",table.getn(_M.ip_blacklist));
-            ngx.log(ngx.ERR, "config_ipfilter_wap_enable:",ngx.shared.status:get('config_ipfilter_wap_enable' ))
+            --ngx.log(ngx.ERR, "ip_whitelist_len:",table.getn(_M.ip_whitelist));
+            --ngx.log(ngx.ERR, "ip_blacklist_len:",table.getn(_M.ip_blacklist));
+            --ngx.log(ngx.ERR, "config_ipfilter_wap_enable:",ngx.shared.status:get('config_ipfilter_wap_enable' ))
 
             -- 连接池大小200个，并且设置最大的空闲时间是 30 秒
             local ok, err = red:set_keepalive(30000, 200)

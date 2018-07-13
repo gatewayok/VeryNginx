@@ -74,8 +74,8 @@ function _M.set()
         return json.encode({["ret"]="failed",["message"]=err})
     else
         --ngx.log(ngx.ERR, "args:",args['enable']..args['wip'])
-        ngx.log(ngx.ERR, "ip_whitelist_len:",table.getn(ip_filter_task.ip_whitelist));
-        ngx.log(ngx.ERR, "config_ipfilter_wap_enable:",ngx.shared.status:get('config_ipfilter_wap_enable' ))
+        --ngx.log(ngx.ERR, "ip_whitelist_len:",table.getn(ip_filter_task.ip_whitelist));
+        --ngx.log(ngx.ERR, "config_ipfilter_wap_enable:",ngx.shared.status:get('config_ipfilter_wap_enable' ))
         local data = {}
         data['ret'] = 'success'
         return json.encode( data )
