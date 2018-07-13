@@ -99,7 +99,7 @@ local function ip2bin(ip)
     if type(ip) ~= "string" then
         return nil, "IP must be a string"
     end
-
+ngx.log(ngx.ERR,ip)
     local octets = split_octets(ip)
     if not octets or #octets ~= 4 then
         return nil, "Invalid IP"
