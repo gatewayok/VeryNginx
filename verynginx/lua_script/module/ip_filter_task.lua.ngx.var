@@ -1,24 +1,25 @@
 -- -*- coding: utf-8 -*-
 local _M = {}
-local redis_host="nginxredis.test.com"
-local redis_pwd="test"
+--local redis_host="nginxredis.test.com"
+--local redis_pwd="test"
 local json = require "json"
 local util = require "util"
 --local iputils = require("resty.iputils")
 local redis = require("resty.redis")
 --iputils.enable_lrucache()
-local redkey_ip_blacklist = "ip_blacklist_wap"
-local redkey_ip_whitelist = "ip_whitelist_wap"
-local redkey_config_ipfilter_enable = "config_ipfilter_wap_enable"
---config_ipfilter_wap_enable= false
-
+local redkey_config_ipfilter_enable = "config_ipfilter_enable"
+--config_ipfilter_enable= false
+local redis_host = ngx.var.waf_redis_host
+local redis_pwd = ngx.var.waf_redis_pwd
+local redkey_ip_blacklist = ngx.var.wafkey_ip_blacklist
+local redkey_ip_whitelist = ngx.var.wafkey_ip_whitelist
 _M.ip_whitelist = {
   }
 _M.ip_blacklist = {
 }
 
 function _M.init()
-    ngx.shared.status:set('config_ipfilter_wap_enable', "false" )
+    ngx.shared.status:set('config_ipfilter_enable', "false" )
 end
 function _M.task_getips()
     local delay = 20  -- in seconds
@@ -69,18 +70,18 @@ function _M.refreship()
 
             local new_ip_blacklist, err = red:smembers(redkey_ip_blacklist)
             local new_ip_whitelist, err = red:smembers(redkey_ip_whitelist)
-            local new_config_ipfilter_wap_enable, err = red:get(redkey_config_ipfilter_enable)
+            local new_config_ipfilter_enable, err = red:get(redkey_config_ipfilter_enable)
             if err then
                 ngx.log(ngx.ERR, "Redis read key error: ", err)
             else
                 _M.ip_blacklist = new_ip_blacklist
                 _M.ip_whitelist = new_ip_whitelist
-                --config_ipfilter_wap_enable = new_config_ipfilter_wap_enable
-                ngx.shared.status:set('config_ipfilter_wap_enable', new_config_ipfilter_wap_enable )
+                --config_ipfilter_enable = new_config_ipfilter_enable
+                ngx.shared.status:set('config_ipfilter_enable', new_config_ipfilter_enable )
             end
             --ngx.log(ngx.ERR, "ip_whitelist_len:",table.getn(_M.ip_whitelist));
             --ngx.log(ngx.ERR, "ip_blacklist_len:",table.getn(_M.ip_blacklist));
-            --ngx.log(ngx.ERR, "config_ipfilter_wap_enable:",ngx.shared.status:get('config_ipfilter_wap_enable' ))
+            --ngx.log(ngx.ERR, "config_ipfilter_enable:",ngx.shared.status:get('config_ipfilter_enable' ))
 
             -- 连接池大小200个，并且设置最大的空闲时间是 30 秒
             local ok, err = red:set_keepalive(30000, 200)
@@ -126,7 +127,7 @@ function _M.set()
     else
         ngx.log(ngx.ERR, "args:",args['enable']..args['wip'])
         ngx.log(ngx.ERR, "ip_whitelist_len:",table.getn(_M.ip_whitelist));
-        ngx.log(ngx.ERR, "config_ipfilter_wap_enable:",ngx.shared.status:get('config_ipfilter_wap_enable' ))
+        ngx.log(ngx.ERR, "config_ipfilter_enable:",ngx.shared.status:get('config_ipfilter_enable' ))
         local data = {}
         data['ret'] = 'success'
         return json.encode( data )

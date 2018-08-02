@@ -5,7 +5,7 @@ local ip_filter_task = require "ip_filter_task"
 local iputils = require("resty.iputils")
 
 function _M.filter()
-    if ngx.shared.status:get('config_ipfilter_wap_enable' ) ~= "true" then
+    if ngx.shared.status:get('config_ipfilter_wap_enable' ) ~= "on" then
         return _M
     end
   local ip = ngx.var.clientRealIp
