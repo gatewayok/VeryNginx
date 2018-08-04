@@ -24,7 +24,7 @@ function _M.filter()
             ngx.exit( ngx.HTTP_OK )
         else
             ngx.header.content_type = 'text/html'
-            --ngx.say('<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>当前网页无法打开</title> </head> <body style="text-align:center"> <div style="margin:10rem auto 0 auto;"> <h1 class="headline">当前网页无法打开!</h1> <p class="light m-b">尊敬的客户 : 您所在的地区或国家限制访问本网站。</p> <p class="light m-b">Dear Customers: Your country or region is restricted to visit this station.</p> </div> </body> </html>')
+            --ngx.say('<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>当前网页无法打开</title> </head> <body style="text-align:center"> <div style="margin:10rem auto 0 auto;"> <h1 class="headline">当前网页无法打开!</h1> <p class="light m-b">尊敬的客户 : 由于您的国家和地区限制，我们无法为您提供服务。给您造成不便，敬请谅解。</p> <p class="light m-b">Dear Customers: Your country or region is restricted to visit this station.</p> </div> </body> </html>')
                         page = [[
             <html lang="en"> <head>
             <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
