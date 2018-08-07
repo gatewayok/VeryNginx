@@ -1,15 +1,21 @@
 -- -*- coding: utf-8 -*-
 local _M = {}
-local redis_host="nginxredis.test.com"
-local redis_pwd="test"
+local jxconfig = require "jxconfig"
+--local redis_host="nginxredis.test.com"
+--local redis_pwd="test"
 local json = require "json"
 local util = require "util"
 --local iputils = require("resty.iputils")
 local redis = require("resty.redis")
 --iputils.enable_lrucache()
-local redkey_ip_blacklist = "ip_blacklist_wap"
-local redkey_ip_whitelist = "ip_whitelist_wap"
-local redkey_config_ipfilter_enable = "config_ipfilter_wap_enable"
+local redis_host = jxconfig.configs['redis_host']
+local redis_pwd = jxconfig.configs['redis_pwd']
+local redkey_config_ipfilter_enable = jxconfig.configs['redkey_config_ipfilter_enable']
+local redkey_ip_blacklist = jxconfig.configs['redkey_ip_blacklist']
+local redkey_ip_whitelist = jxconfig.configs['redkey_ip_whitelist']
+--local redkey_ip_blacklist = "ip_blacklist_wap"
+--local redkey_ip_whitelist = "ip_whitelist_wap"
+--local redkey_config_ipfilter_enable = "config_ipfilter_wap_enable"
 --config_ipfilter_wap_enable= false
 
 _M.ip_whitelist = {
@@ -18,10 +24,10 @@ _M.ip_blacklist = {
 }
 
 function _M.init()
-    ngx.shared.status:set('config_ipfilter_wap_enable', "false" )
+    ngx.shared.status:set('config_ipfilter_wap_enable', "off" )
 end
 function _M.task_getips()
-    local delay = 20  -- in seconds
+    local delay = 60  -- in seconds
     local new_timer = ngx.timer.at
     local check
 
@@ -89,48 +95,48 @@ function _M.refreship()
                 return
             end
 end
-function _M.set()
-    local args = util.get_request_args()
-    local red = redis:new()
-    red:set_timeout(2000) -- 1 sec
-    local ok, err = red:connect(redis_host, 6379)
-    if not ok then
-        ngx.log(ngx.ERR, "failed to connect redis: ", err)
-        return
-    end
-    local count
-    count, err = red:get_reused_times()
-    if 0 == count then
-        ok, err = red:auth(redis_pwd)
-        if not ok then
-            ngx.log(ngx.ERR, "failed to auth: ", err)
-            return
-        end
-    elseif err then
-        ngx.log(ngx.ERR, "failed to get reused times: ", err)
-        return
-    end
-    if args['enable']  then
-        ok, err = red:set(redkey_config_ipfilter_enable,args['enable'])
-    end
-    if args['wip']  then
-        ok, err = red:sadd(redkey_ip_whitelist,args['wip'])
-    end
-    if args['bip']  then
-        ok, err = red:sadd(redkey_ip_blacklist,args['bip'])
-    end
-    if not ok then
-        ngx.log(ngx.ERR, "failed to set key: ", err)
-        ngx.status = 400
-        return json.encode({["ret"]="failed",["message"]=err})
-    else
-        ngx.log(ngx.ERR, "args:",args['enable']..args['wip'])
-        ngx.log(ngx.ERR, "ip_whitelist_len:",table.getn(_M.ip_whitelist));
-        ngx.log(ngx.ERR, "config_ipfilter_wap_enable:",ngx.shared.status:get('config_ipfilter_wap_enable' ))
-        local data = {}
-        data['ret'] = 'success'
-        return json.encode( data )
-    end
-end
+--function _M.set()
+--    local args = util.get_request_args()
+--    local red = redis:new()
+--    red:set_timeout(2000) -- 1 sec
+--    local ok, err = red:connect(redis_host, 6379)
+--    if not ok then
+--        ngx.log(ngx.ERR, "failed to connect redis: ", err)
+--        return
+--    end
+--    local count
+--    count, err = red:get_reused_times()
+--    if 0 == count then
+--        ok, err = red:auth(redis_pwd)
+--        if not ok then
+--            ngx.log(ngx.ERR, "failed to auth: ", err)
+--            return
+--        end
+--    elseif err then
+--        ngx.log(ngx.ERR, "failed to get reused times: ", err)
+--        return
+--    end
+--    if args['enable']  then
+--        ok, err = red:set(redkey_config_ipfilter_enable,args['enable'])
+--    end
+--    if args['wip']  then
+--        ok, err = red:sadd(redkey_ip_whitelist,args['wip'])
+--    end
+--    if args['bip']  then
+--        ok, err = red:sadd(redkey_ip_blacklist,args['bip'])
+--    end
+--    if not ok then
+--        ngx.log(ngx.ERR, "failed to set key: ", err)
+--        ngx.status = 400
+--        return json.encode({["ret"]="failed",["message"]=err})
+--    else
+--        ngx.log(ngx.ERR, "args:",args['enable']..args['wip'])
+--        ngx.log(ngx.ERR, "ip_whitelist_len:",table.getn(_M.ip_whitelist));
+--        ngx.log(ngx.ERR, "config_ipfilter_wap_enable:",ngx.shared.status:get('config_ipfilter_wap_enable' ))
+--        local data = {}
+--        data['ret'] = 'success'
+--        return json.encode( data )
+--    end
+--end
 
 return _M

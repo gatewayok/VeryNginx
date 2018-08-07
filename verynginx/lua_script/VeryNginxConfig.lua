@@ -53,6 +53,10 @@ _M.configs['matcher'] = {
         ["URI"] = {
             ['operator'] = "≈",
             ['value']="^/verynginx/",
+        },
+        ["IP"] = {
+            ["value"] = "128.199.113.98",
+            ["operator"] = "!="
         }
     },
     ["localhost"] = {
@@ -78,7 +82,7 @@ _M.configs['matcher'] = {
 _M.configs["response"] = {
     ["demo_response_html"] = {
         ["content_type"] = "text/html",
-        ["body"] = "This is a html demo response",
+        ["body"] = '<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>当前网页无法打开</title> </head> <body style="text-align:center"> <div style="margin:10rem auto 0 auto;"> <h1 class="headline">当前网页无法打开!</h1> <p class="light m-b">尊敬的客户 : 由于您的国家和地区限制，我们无法为您提供服务。给您造成不便，敬请谅解。</p> <p class="light m-b">Dear Customers: Your country or region is restricted to visit this station.</p> </div> </body> </html>',
     },
     ["demo_response_json"] = {
         ["content_type"] = "application/json",
@@ -120,6 +124,7 @@ _M.configs["filter_rule"] = {
     {["matcher"] = 'attack_backup_0', ["action"] = "block", ["code"] = '403', ["enable"] = true },
     {["matcher"] = 'attack_scan_0', ["action"] = "block", ["code"] = '403', ["enable"] = true },
     {["matcher"] = 'attack_code_0', ["action"] = "block", ["code"] = '403', ["enable"] = true },
+    {["matcher"] = 'verynginx', ["action"] = "block", ["code"] = '200', ["enable"] = true ,["custom_response"] = true, ["response"] = "demo_response_html" },
 }
 
 _M.configs["proxy_pass_enable"] = true
@@ -207,7 +212,7 @@ function _M.version_updater_034( configs )
     configs['response'] = {}
     configs['response']["demo_response_html"] = {
         ["content_type"] = "text/html",
-        ["body"] = "This is a html demo response",
+        ["body"] = '<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>当前网页无法打开</title> </head> <body style="text-align:center"> <div style="margin:10rem auto 0 auto;"> <h1 class="headline">当前网页无法打开!</h1> <p class="light m-b">尊敬的客户 : 由于您的国家和地区限制，我们无法为您提供服务。给您造成不便，敬请谅解。</p> <p class="light m-b">Dear Customers: Your country or region is restricted to visit this station.</p> </div> </body> </html>',
     }
     configs['response']["demo_response_json"] = {
         ["content_type"] = "application/json",

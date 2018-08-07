@@ -1,6 +1,5 @@
 -- -*- coding: utf-8 -*-
 local _M = {}
-local VeryNginxConfig = require "VeryNginxConfig"
 local ip_filter_task = require "ip_filter_task"
 local iputils = require("resty.iputils")
 
@@ -9,7 +8,7 @@ function _M.filter()
         return _M
     end
   local ip = ngx.var.clientRealIp
-  local response_list = VeryNginxConfig.configs['response']
+  --local response_list = jxconfig.configs['response']
   local response = nil
   whitelist = iputils.parse_cidrs(ip_filter_task.ip_whitelist)
   blacklist = iputils.parse_cidrs(ip_filter_task.ip_blacklist)

@@ -1,0 +1,11 @@
+local _M = {}
+_M["configs"] = {}
+--------------default config------------
+
+_M.configs["redis_host"] = ""
+_M.configs["redis_pwd"] = ""
+_M.configs["redkey_config_ipfilter_enable"] = "config_ipfilter_wap_enable"
+_M.configs["redkey_ip_whitelist"] = "ip_whitelist_wap"
+_M.configs["redkey_ip_blacklist"] = "ip_blacklist_wap"
+
+return _M
