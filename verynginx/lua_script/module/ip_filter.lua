@@ -8,7 +8,7 @@ function _M.filter()
         return _M
     end
   local ip = ngx.var.clientRealIp
-  --local response_list = jxconfig.configs['response']
+  local response_list = jxconfig.configs['response']
   local response = nil
   whitelist = iputils.parse_cidrs(ip_filter_task.ip_whitelist)
   blacklist = iputils.parse_cidrs(ip_filter_task.ip_blacklist)
