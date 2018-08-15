@@ -27,7 +27,7 @@ function _M.init()
     ngx.shared.status:set('config_ipfilter_wap_enable', "off" )
 end
 function _M.task_getips()
-    local delay = 60  -- in seconds
+    local delay = 30  -- in seconds
     local new_timer = ngx.timer.at
     local check
 
