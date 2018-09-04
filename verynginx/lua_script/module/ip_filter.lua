@@ -80,7 +80,6 @@ function _M.filter()
                 }
                 .headline {
                   font-weight: normal;
-                  font-size: 4.25rem;
                   line-height: 1.2;
                   margin-bottom: 1.5rem;
                 }
